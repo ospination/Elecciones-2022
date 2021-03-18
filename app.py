@@ -2,7 +2,9 @@ import os
 import json
 import random
 
-from cs50 import SQL
+import requests
+import urllib.parse
+
 from flask import Flask, flash, jsonify, redirect, render_template, request, session
 from flask_session import Session
 from tempfile import mkdtemp

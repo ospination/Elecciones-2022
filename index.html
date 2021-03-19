@@ -16,45 +16,21 @@
 
         <link href="/static/styles.css" rel="stylesheet">
         <script src="/index.js" charset="utf-8"></script>
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 
         <title>Posibles curules de Senado y Camara elecciones 2022</title>
 
     </head>
     <body> 
-        <h3>I like the animal: {{ value }}</h3>
     <main class="container p-5">
-    <table class="table table-sm table">
-  <thead>
-    <tr>
-      <th scope="col">Creado Por</th>
-      </tr>
-  </thead>
-  <tbody>
         <tr>
         <td>@ospination</td>
         </tr>
      </table>
-    <table class="table table-sm table">
-    <thead>
-    <tr>
-      <th scope="col">Partido</th>
-      <th scope="col"># Votos</th>
-      <th scope="col">Porcentaje</th>
-      </tr>
-  </thead>
-  <tbody>
-
-        {% for i in range(len(votos)%}
-        <tr>
-        <td>{{partidos[i]}}</td>
-        <td>{{votos[i]}}</td>
-        <td>{{i}}</td>
-        </tr>
-        {% endfor %}
-      </table>
-      </main>
+    <a id="partidos"></a>
+    <a id="votos"></a>
+    <table>
+    <tbody></tbody>
+    </table>
+     </main>
     </body>
 </html>

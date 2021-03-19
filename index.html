@@ -20,28 +20,7 @@
         <title>Posibles curules de Senado y Camara elecciones 2022</title>
 
     </head>
-    <script>
-var partidos = ["Perros","Gatos","Caballos","Lobos","Aguilas","Zarigueyas"];
-var votos = [];
-var i;
-for (i = 0; i < partidos.length; i++) {
-  var x = Math.floor((Math.random() * 100000) + 100);
-  votos.push(x);
-} 
-document.getElementById("partidos").innerHTML = partidos;
-document.getElementById("votos").innerHTML = votos;
-table = document.querySelector('table tbody');
-var tabla = [partidos,votos.sort(function (a, b) {  return b - a;  })];
-var r = partidos.map(function(col, i) {
-  return tabla.map(function(row) {
-    return row[i];
-  });
-});
-r.forEach(function(e) {
-  table.innerHTML += '<tr><td>' + e[0] + '</td><td>' + e[1] + '</td></tr>'
-})
-document.getElementById("tabla").innerHTML = tabla;
-    </script>
+
     <body> 
     <main class="container p-5">
        <table class="table table-sm table">
@@ -55,7 +34,7 @@ document.getElementById("tabla").innerHTML = tabla;
         <td>@Ospination</td>
         </tr>
        <tr>
-        <td>ya está el codigo</td>
+        <td>No está el codigo en index.html</td>
         </tr>
     <a id="partidos">partidos</a>
     <a id="votos">votos</a>

@@ -5,8 +5,9 @@
 
 <h1>Tabla de votaciones de prueba</h1>
 
-<button id="demo" onclick="()">Click me</button>
+<button id="demo" onclick="genTable()">Click me</button>
 <script>
+function genTable() {
 $(document).ready(function(){
 var partidos = ["Perros","Gatos","Caballos","Lobos","Aguilas","Zarigueyas"];
 var votos = [];
@@ -23,22 +24,22 @@ var bodyString = '';
     });
     $('.partidos tbody').html(bodyString);
     });
+    }
 </script>
 </head>
 <body>
-  <thead>
+  
+ <p> <thead>
     <tr>
       <th scope="col">Creado Por</th>
       </tr>
   </thead>
-  <tbody>
-        <tr>
-        <td>@Ospination</td>
-        </tr>
-       <tr>
-        <td>No está el codigo en index.html</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th scope="col">@ospination</th>
+      </tr>
+  </thead>
+  </p>
   <table class="table table-striped partidos">
       <thead>
           <tr><th>Partidos</th><th>Votos</th>

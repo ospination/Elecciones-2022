@@ -2,30 +2,11 @@
 <html>
 <head>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="/Elecciones-2022/index.js"></script>
 
 <h1>Tabla de votaciones de prueba</h1>
 
-<button id="demo" onclick="genTable()">Click me</button>
-<script>
-function genTable() {
-$(document).ready(function(){
-var partidos = ["Perros","Gatos","Caballos","Lobos","Aguilas","Zarigueyas"];
-var votos = [];
-var i;
-for (i = 0; i < partidos.length; i++) {
-  var x = Math.floor((Math.random() * 100000) + 100);
-  votos.push(x);
-}
-var partidos = partidos.sort( () => .5 - Math.random() );
-var votos = votos.sort(function (a, b) {  return b - a;  });
-var bodyString = '';
-    $.each(partidos, function(index, partidos) {
-        bodyString += ('<tr><td>'+partidos+'</td><td>'+votos[index]+'</td></tr>');
-    });
-    $('.partidos tbody').html(bodyString);
-    });
-    }
-</script>
+
 </head>
 <body>
   
@@ -42,7 +23,7 @@ var bodyString = '';
   </p>
   <table class="table table-striped partidos">
       <thead>
-          <tr><th>Partidos</th><th>Votos</th>
+      <tr><th>Partidos</th><th>Votos</th></tr>
       </thead>
       <tbody></tbody>
   </table>

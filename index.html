@@ -1,59 +1,49 @@
 <!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-<html lang="en">
+<h1>Tabla de votaciones de prueba</h1>
 
-    <head>
-
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <!-- documentation at http://getbootstrap.com/docs/4.1/, alternative themes at https://bootswatch.com/ -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
-
-        <!-- https://favicon.io/emoji-favicons/money-mouth-face/ -->
-        <link href="/Elecciones-2022/static/favicon.ico" rel="icon">
-
-        <link href="/static/styles.css" rel="stylesheet">
-        <!--<script src="/Elecciones-2022/index.js" charset="utf-8"></script>-->
-
-        <title>Posibles curules de Senado y Camara elecciones 2022</title>
-
-    </head>
-
-    <body> 
-    <main class="container p-5">
-       <table class="table table-sm table">
+<button id="demo" onclick="()">Click me</button>
+<script>
+$(document).ready(function(){
+var partidos = ["Perros","Gatos","Caballos","Lobos","Aguilas","Zarigueyas"];
+var votos = [];
+var i;
+for (i = 0; i < partidos.length; i++) {
+  var x = Math.floor((Math.random() * 100000) + 100);
+  votos.push(x);
+}
+var partidos = partidos.sort( () => .5 - Math.random() );
+var votos = votos.sort(function (a, b) {  return b - a;  });
+var bodyString = '';
+    $.each(partidos, function(index, partidos) {
+        bodyString += ('<tr><td>'+partidos+'</td><td>'+votos[index]+'</td></tr>');
+    });
+    $('.partidos tbody').html(bodyString);
+    });
+</script>
+</head>
+<body>
   <thead>
     <tr>
       <th scope="col">Creado Por</th>
       </tr>
   </thead>
-  <p>The onclick event is used to trigger a function when an element is clicked on.</p>
-
-<p>Click the button to trigger a function that will output "Hello World" in a p element with id="demo".</p>
-
-<button onclick="myFunction()">Click me</button>
-
-<p id="boton"></p>
-
-<script>
-function myFunction() {
-  document.getElementById("boton").innerHTML = "Hello World";
-}
-</script>
-      <!-- <tbody>
+  <tbody>
         <tr>
         <td>@Ospination</td>
         </tr>
        <tr>
         <td>No está el codigo en index.html</td>
         </tr>
-    <a id="partidos">partidos</a>
-    <a id="votos">votos</a>
-    <table class="table table-sm table">
-    <tbody></tbody>
-    </table>-->
-     </main>
-    </body>
+    </tbody>
+  <table class="table table-striped partidos">
+      <thead>
+          <tr><th>Partidos</th><th>Votos</th>
+      </thead>
+      <tbody></tbody>
+  </table>
+</body>
 </html>
